@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                alert("Text: " + $("#test").text());
+            });
+            $("#btn2").click(function(){
+                alert("HTML: " + $("#test").html());
+            });
+            $("#btn3").click(function () {
+                alert("Value: " + $("#name").val());
+            });
+            $("#btn4").click(function () {
+                $("#test").text("I am Razi Ahmad");
+            });
+            $("#btn5").click(function () {
+                $("#test").html("I am <b>Razi Ahmad</b>");
+            });
+            $("#btn6").click(function () {
+                $("#name").val("Razi Ahmad");
+            });
+            $("#btn7").click(function () {
+                alert($("#biz").attr("href"));
+            });
+            $("#btn10").click(function () {
+                $("#biz").attr({
+                    "href": "http://laratechnology.com/",
+                    "title":"laratechnology.com"
+                });
+            });
+            $("#btn8").click(function(){
+                $("#test1").text(function(i, origText){
+                    return "Old text: " + origText + " New text: Hello world! (index: " + i + ")"; 
+                });
+            });
+
+            $("#btn9").click(function(){
+                $("#test2").html(function(i, origText){
+                    return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")"; 
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <p id="test">This is <b>BizRuntime</b>.</p>
+
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+
+    <p>Name: <input id="name" type="text" value="Harsh Ruparel"></p>
+
+    <button id="btn3">Show Value</button>
+    <button id="btn4">Set Text</button>
+    <button id="btn5">Set HTML</button>
+    <button id="btn6">Set Value</button>
+
+    <p><a href="http://www.bizruntime.com/" id="biz">bizruntime.com</a></p>
+
+    <button id="btn7">Show href Value</button>
+    <button id="btn10">Change href Value</button>
+
+    <p id="test1">This is a <b>bold</b> paragraph.</p>
+    <p id="test2">This is another <b>bold</b> paragraph.</p>
+
+    <button id="btn8">Show Old/New Text</button>
+    <button id="btn9">Show Old/New HTML</button>
+
+</body>
+</html>

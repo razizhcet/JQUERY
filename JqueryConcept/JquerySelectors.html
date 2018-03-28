@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#a").click(function () {
+                $(this).hide();
+            });
+            $("#b").click(function () {
+                $("*").hide();
+            });
+            $("#c").click(function () {
+                $("p.intro").hide();
+            });
+            $("#d").click(function () {
+                $("p:first").hide();
+            });
+            $("#e").click(function () {
+                $("ul li:first").hide();
+            });
+            $("#f").click(function () {
+                $("ul li:first-child").hide();
+            });
+            $("#g").click(function () {
+                $("[href]").hide();
+            });
+            $("#h").click(function () {
+                $("a[target='_blank']").hide();
+            });
+            $("#i").click(function () {
+                $("a[target!='_blank']").hide();
+            });
+            $("#j").click(function () {
+                $(":button").hide();
+            });
+            $("#k").click(function () {
+                $("tr:even").css("background-color", "yellow");
+            });
+            $("#l").click(function () {
+                $("tr:odd").css("background-color", "blue");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2 class="intro">This is a heading</h2>
+
+    <p class="intro">This is First paragraph.</p>
+
+    <p id="p2">This is Second paragraph.</p>
+
+    <p><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a></p>
+    <p><a href="https://www.w3schools.com/css/">CSS Tutorial</a></p>
+
+    <p>List 1:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <p>List 2:</p>
+    <ul>
+        <li>Kar</li>
+        <li>UP</li>
+        <li>Assam</li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+    </table>
+
+    <button id="a">HideThis</button><br/>
+
+    <button id="b">HideAll</button> <br/>
+
+    <button id="c">HideP1</button> <br/>
+
+    <button id="d">HideP1</button> <br/>
+
+    <button id="e">HideLi1</button> <br />
+
+    <button id="f">HideLi1All</button> <br />
+
+    <button id="g">HideLinks</button> <br />
+
+    <button id="h">HideLinks1</button> <br />
+
+    <button id="i">HideLinks2</button> <br />
+
+    <button id="j">HideAllButtons</button> <br />
+
+    <button id="k">EvenColor</button> <br />
+
+    <button id="l">OddColor</button> <br />
+
+
+</body>
+</html>

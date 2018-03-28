@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("table").mouseenter(function () {
+                alert("You entered table!");
+            });
+            $("table").mouseleave(function () {
+                alert("Now You left table!");
+            });
+            $("#p1").mousedown(function () {
+                alert("Mouse down over p1!");
+            });
+            $("#p2").mouseup(function () {
+                alert("Mouse up over p2!");
+            });
+            $("#p3").hover(function () {
+                alert("You entered p3!");
+            },
+            function () {
+                alert("Now You left p3!");
+            });
+            $("input").focus(function () {
+                $(this).css("background-color", "lightpink");
+            });
+            $("input").blur(function () {
+                $(this).css("background-color", "lightblue");
+            });
+            $("#p4").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Table for events</h3>
+
+    <p id="p1">Hello I am First Paragraph for mousedown</p>
+
+    <p id="p2">Hello I am Second Paragraph for mouseup</p>
+
+    <p id="p3">Hello I am Third Paragraph for hover</p>
+
+    <p id="p4">Hello I am Third Paragraph for on() function</p>
+
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email">
+
+    <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+    </table>
+</body>
+</html>
